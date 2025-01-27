@@ -7,7 +7,7 @@ const port = 3000;
 app.use(express.json());
 
 const array = [];
-app.post("/post",(req,res)=>{
+app.get("/get",(req,res)=>{
     const {Username,email,password,DataOFBirth} = req.body;
     const passwordRegex = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
